@@ -1,0 +1,36 @@
+//asynchronous js 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript on youtube channel</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+
+    let starting;
+
+    document.querySelector('#start').addEventListener('click', function(){
+        console.log('Start button is clicked')
+         starting = setInterval(function(){
+            console.log('krishh',Date.now());
+        }, 2000) 
+    })
+
+    document.querySelector('#stop')
+        .addEventListener('click', function(){
+            console.log('stop button is clicked')
+            clearInterval(starting);
+        });
+   
+ 
+
+    
+</script>
+</html>

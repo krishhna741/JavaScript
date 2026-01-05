@@ -1,0 +1,31 @@
+//asynchronous js 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Asynchronous js on youtube channel</h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+
+const saykrishh = function(){
+        console.log('krishh');
+    }
+
+    const change = function(){
+        document.querySelector('h1').innerHTML="Best JavaScript Serie"
+    }
+
+    const stopped = setTimeout(change, 2000);
+
+    document.querySelector("#stop").addEventListener('click', function(){
+        clearTimeout(stopped)
+        console.log('change is STOPPED')
+    })
+</script>
+</html>
